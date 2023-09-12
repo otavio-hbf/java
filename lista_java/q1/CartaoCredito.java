@@ -1,29 +1,22 @@
 package lista_java.q1;
 
-class ClienteCC{
-    public int cod, senha;
+class ClienteCC extends Cliente<Integer>{
 
     ClienteCC(int cod, int senha){
-        this.cod = cod;
-        this.senha = senha;
+        super(cod, senha);
     }
 
-    public int getCod() {
-        return cod;
+    public int getCod() { //Sei que eh redudante, mas optei por fazer isso para ter mais clareza no código
+        return this.getAuth1();
     }
     public int getSenha() {
-        return senha;
+        return this.getAuth2();
     }
 }
 
 public class CartaoCredito implements FormaDePagamento {
 
-    ClienteCC[] clients = new ClienteCC[]{
-        new ClienteCC(412, 2452),
-        new ClienteCC(706, 132214),
-        new ClienteCC(123, 1234),
-    };
-
+    ClienteCC[] clients ;
     int input_cod;
     int input_senha;
     double valor;
@@ -31,6 +24,12 @@ public class CartaoCredito implements FormaDePagamento {
     CartaoCredito(int input_cod, int input_senha){
         this.input_cod = input_cod;
         this.input_senha = input_senha;
+
+        this.clients = new ClienteCC[]{
+            new ClienteCC(413, 2452),
+            new ClienteCC(706, 132214),
+            new ClienteCC(123, 1234),
+        };
     }
     
     @Override
@@ -39,7 +38,7 @@ public class CartaoCredito implements FormaDePagamento {
 
         for(ClienteCC client : this.clients){
 
-            if((this.input_cod == client.cod) && (this.input_senha == client.senha)){
+            if((this.input_cod == client.getCod()) && (this.input_senha == client.getSenha())){
                 result = true;
                 break;
             }
@@ -51,7 +50,7 @@ public class CartaoCredito implements FormaDePagamento {
     @Override
     public void processarPagamento(double valor) throws Authfail{
         if(this.autenticar()){
-            System.out.println("Valor de R$" + valor + " pago com cartão de crédito");
+            System.out.println("Valor de R$" + valor + " pago com Cartao de Credito.");
         }
         else{
             Authfail e;
