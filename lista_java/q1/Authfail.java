@@ -1,4 +1,4 @@
-package lista_java.q1;
+package q1;
 
 public class Authfail extends Exception {
     Authfail(){

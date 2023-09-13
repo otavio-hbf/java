@@ -1,4 +1,4 @@
-package lista_java.q1;
+package q1;
 
 public interface FormaDePagamento {
     public boolean autenticar ();

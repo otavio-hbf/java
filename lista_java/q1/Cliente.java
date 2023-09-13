@@ -1,4 +1,4 @@
-package lista_java.q1;
+package q1;
 
 public class Cliente <T> {
     private T auth1, auth2;
