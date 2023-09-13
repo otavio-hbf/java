@@ -6,6 +6,7 @@ public class Tarefa<T> {
     private T responsible;
 
     Tarefa(String d, T r){
+
         this.description = d;
         this.responsible = r;
         this.setWorkload();
@@ -25,19 +26,20 @@ public class Tarefa<T> {
         if(this.description == "fiscal"){
             this.workload = 40;
         }
-        if(this.description == "development"){
+        else if(this.description == "development"){
             this.workload = 60;
         }
-        if(this.description == "marketing"){
+        else if(this.description == "marketing"){
             this.workload = 20;
         }
-        if(this.description == "admin"){
+        else if(this.description == "admin"){
             this.workload = 30;
         }
-        if(this.description == "sales"){
+        else if(this.description == "sales"){
             this.workload = 30;
         }
         else{
+
             System.out.println(this.description + " is not a function");
             this.workload = 0;
         }
