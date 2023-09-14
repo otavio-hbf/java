@@ -1,0 +1,19 @@
+Uma classe abstrata é uma tal que não pode ser iniciada por si só, isto é, só pode ser chamada através de uma
+instância de uma subclasse. Uma classe abstrata pode conter métodos, concretos e abstratos, bem como atributos.
+
+Um classe concreta, por sua vez, é uma classe que pode ser instanciada normalmente e implementa todos os seus
+métodos, diretamente ou através de herança ou implementação de uma interface.
+
+Uma interface, por fim, tal qual uma classe abstrata não pode ser diretamente instânciada, mas em contraste,
+não pode herdar de uma classe, pode herdar de várias interfaces, não pode conter construtor, todas suas
+variáveis são públicas e de valor estático e por fim todos seus métodos devem ser, por definição, todos 
+abstratos, contendo apenas a assinatura da função.
+
+No contexto de um sistema de gerenciamento de veículos para uma locadora de automóveis, pode se implementar,
+por exemplo, uma interface chamada Veículo, que tem metodos abstratos como locomover, realizarManuntencao e
+etc...Essa interface deveria ser implementada por classes concretas de tipos veículos como carro, moto, van,
+caminhão, dentre outros.
+Essas classes concretas poderiam também ser extensões de classes abstratas de gêneros de veículos. Por exemplo,
+Caminhonete, Sedã, Van poderiam estender a classe abstrata Veiculo4Rodas, enquanto Moto, Bicicleta, Veiculo2Rodas.
+O uso de interfaces e classes abstratas além de usualmente poupar código, também contribui com a organização e a
+consistência do código.

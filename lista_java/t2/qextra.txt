@@ -1,0 +1,15 @@
+Coesão é o princípio que Engenharia de Software que postula que um componente do código deve implementar
+uma única funcionalidade. No contexto de Orientação a Objeto, cada classe deve modelar uma única entidade.
+Java, em certo nível, força Coesão quando cada arquivo só pode conter uma classe pública.
+
+Acoplamento é uma medida de quanto os componentes do código estão interconectados entre si.Alto acomplamento
+é um sinal de que uma alteração em uma dada seção de código vai intereferir em várias outras. Por exemplo, 
+se no código existem classes, que herdam de classes, que herdam de classes e assim em diante, seria um caso
+de grande acoplamento.
+
+Idealmente, um código deve ter alta coesão e baixo acoplamento.
+
+Por fim, encapsulamento é a técnica de "esconder" funções e dados e limitar o acesso a eles. Esse é um principio
+amplamente seguido em O.O. Percebe-se isso com a prática de deixar privados atributos de classes públicas, uma vez
+que apenas aquela classe deveria ter a permissão de manipulá-los. Tornar privado um método que atua apenas interna
+mente a uma classe também é um exemplo dessa técnica.
