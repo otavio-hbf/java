@@ -7,6 +7,8 @@ public class Espresso extends Coffe{
         this.milkRequired = 50;
         this.coffeeRequired = 50;
     }
+
+    @Override
     public void prepare(){
         System.out.println("Selecione uma xícara de 150 ml.");
         System.out.println("Selecione o leite concentrado.");

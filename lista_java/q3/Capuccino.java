@@ -6,6 +6,8 @@ public class Capuccino extends Coffe{
         this.milkRequired = 100;
         this.coffeeRequired = 100;
     }
+
+    @Override
     public void prepare(){
 
         System.out.println("Coloque "+this.milkRequired+"ml de leite. "+ this.coffeeRequired +"ml de cafe e " + this.waterRequired + "ml de agua na máquina.");

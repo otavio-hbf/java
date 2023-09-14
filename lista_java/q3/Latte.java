@@ -6,6 +6,8 @@ public class Latte extends Coffe {
         this.milkRequired = 350;
         this.coffeeRequired = 50;
     }
+
+    @Override
     public void prepare(){
 
         System.out.println("Selecione um copo de 500 ml.");
@@ -13,6 +15,6 @@ public class Latte extends Coffe {
         System.out.println("Coe " + this.coffeeRequired + "g de cafe com " + this.waterRequired +"ml de agua.");
         System.out.println("Escolha entre leite comum ou de soja.");      
         System.out.println("Realize a mistura.");
-        
+
     }
 }
